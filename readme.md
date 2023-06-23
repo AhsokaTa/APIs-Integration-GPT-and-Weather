@@ -1,5 +1,5 @@
 # WheatherApp
-App para conocer la temperatura que hace en una ciudad
+Aplicación que permite obtener información sobre el clima de una ciudad, realizar traducciones y hacer preguntas sobre actividades en la ciudad. Utiliza el modelo de lenguaje GPT de OpenAI para generar las respuestas basadas en esas consultas.
 
 1) Crea un API key <br>
 API Access Key https://weatherstack.com/dashboard<br>
