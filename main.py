@@ -1,5 +1,6 @@
 import requests
-from config import APIKEY
+import openai
+from config import APIKEY_WEATHER,  APIKEY_OpenAI
 
 def get_weather_information(query):
 
@@ -10,7 +11,7 @@ def get_weather_information(query):
     # request parameters
     
     parameters = {
-        "access_key": APIKEY,    
+        "access_key": APIKEY_WEATHER,    
         "query": query
     }
 
@@ -32,3 +33,14 @@ def get_weather_information(query):
 
 query = input ("¿En qué ciudad quieres conocer el tiempo? ")   
 get_weather_information(query)
+
+# https://platform.openai.com/docs/guides/gpt/chat-completions-api
+
+# Chat Completions API  https://platform.openai.com/docs/guides/gpt/chat-completions-api
+openai.api_key = APIKEY_OpenAI
+
+#model https://platform.openai.com/docs/models/overview
+openai.ChatCompletion.create(model = "gpt-3.5-turbo",
+                             messages = [{"role":"user","content": "Que es Python?"}])
+
+
